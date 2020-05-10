@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "404290750825",
+    "firebase_url": "https://bt-sict.firebaseio.com",
+    "project_id": "bt-sict",
+    "storage_bucket": "bt-sict.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:404290750825:android:8d0d00fc07e1c66d2395f8",
+        "android_client_info": {
+          "package_name": "com.sict.appsinhvien"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "404290750825-jiq6a5hs25l6sbc8vu28ilgkf0ls6cfd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjyK8LSAZtNx-w3Y5yjyncD_gavz_WIZI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "404290750825-jiq6a5hs25l6sbc8vu28ilgkf0ls6cfd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="?android:attr/actionBarSize"
+    android:screenOrientation="landscape">
+
+
+    <TableLayout
+        android:id="@+id/agentStatusTable"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:visibility="visible">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:weightSum="22">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="#c98282"
+                android:gravity="center"
+                android:text="#" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="2"
+                android:background="#D50404"
+                android:gravity="center"
+                android:text="Môn" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="2"
+                android:background="#04D562"
+                android:gravity="center"
+                android:text="Miệng " />
+
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="2"
+                android:background="#04D593"
+                android:gravity="center"
+                android:text="15' 1" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="2"
+                android:background="#D5B604"
+                android:gravity="center"
+                android:text="15' 2" />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="2"
+                android:background="#D50404"
+                android:gravity="center"
+                android:text="15' 3" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="2"
+                android:background="#970462D5"
+                android:gravity="center"
+                android:text="1 Tiết 1" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="2"
+                android:background="#04ABD5"
+                android:gravity="center"
+                android:text="1 Tiết 2" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="2"
+                android:background="#CE04D5"
+                android:gravity="center"
+                android:text="1 Tiết 3" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="2"
+                android:background="#CE04D5"
+                android:gravity="center"
+                android:text="Cuối kỳ" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="2"
+                android:background="#CE04D5"
+                android:gravity="center"
+                android:text="Trung bình" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="#CE04D5"
+                android:gravity="center"
+                android:text="" />
+
+
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:weightSum="22">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="#D50404"
+                android:gravity="center"
+                android:text="1" />
+
+
+            <TextView
+                android:layout_margin="3dp"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:background="#D50404"
+                android:gravity="center"
+                android:text="Đại số" />
+
+            <TextView
+                android:id="@+id/toanMieng"
+                android:layout_margin="3dp"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:background="#D50404"
+                android:gravity="center"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/toan15p1"
+                android:layout_margin="3dp"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:background="#D50404"
+                android:gravity="center"
+                android:text="1" />
+
+            <TextView
+                android:id="@+id/toan15p2"
+                android:layout_margin="3dp"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:background="#D50404"
+                android:gravity="center"
+                android:text="10" />
+
+            <TextView
+                android:id="@+id/toan15p3"
+                android:layout_margin="3dp"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:background="#D50404"
+                android:gravity="center"
+                android:text="10" />
+
+            <TextView
+                android:id="@+id/toanTiet1"
+                android:layout_margin="3dp"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:background="#D50404"
+                android:gravity="center"
+                android:text="10" />
+
+            <TextView
+                android:id="@+id/toanTiet2"
+                android:layout_margin="3dp"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:background="#D50404"
+                android:gravity="center"
+                android:text="10" />
+
+            <TextView
+                android:layout_margin="3dp"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:background="#D50404"
+                android:gravity="center"
+                android:text="10" />
+
+            <TextView
+                android:layout_margin="3dp"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:background="#D50404"
+                android:gravity="center"
+                android:text="10" />
+
+            <TextView
+                android:layout_margin="3dp"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:background="#D50404"
+                android:gravity="center"
+                android:text="9,8" />
+
+            <TextView
+                android:id="@+id/txtEditScores"
+                android:layout_margin="3dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="#F44336"
+                android:text="Edit"/>
+
+
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>

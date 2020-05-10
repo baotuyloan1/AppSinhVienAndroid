@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_addStudent"
+            android:icon="@drawable/ic_add"
+            android:title="Thêm sinh viên"></item>
+
+    </group>
+
+
+    <item android:title="Authentication">
+        <menu>
+            <item
+                android:id="@+id/nav_profile"
+                android:icon="@drawable/ic_profile"
+                android:title="Hồ sơ"></item>
+
+            <item
+                android:id="@+id/nav_editProfile"
+                android:icon="@drawable/ic_edit"
+                android:title="Cập nhật hồ sơ" />
+            <item
+                android:id="@+id/nav_logOut"
+                android:icon="@drawable/ic_logout"
+                android:title="Đăng xuất"/>
+        </menu>
+
+    </item>
+</menu>

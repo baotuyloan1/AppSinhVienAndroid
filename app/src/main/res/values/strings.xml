@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">AppSinhVien</string>
+    <string name="button">Button</string>
+    <string name="close">close</string>
+    <string name="open">open</string>
+    <array name="monhoc">
+        <item>Laravel</item>
+        <item>ASP.NET</item>
+        <item>Java</item>
+        <item>Html &amp; CSS</item>
+        <item>Blockchain</item>
+        <item>Forex</item>
+    </array>
+</resources>

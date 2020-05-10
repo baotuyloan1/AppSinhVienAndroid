@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddScoreActivity">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Nhập điểm"
+        android:textColor="#FF0000"
+        android:textSize="30sp" />
+
+
+    <TextView
+        android:layout_below="@id/textViewTitle"
+        android:id="@+id/textViewTenSinhvien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="36dp"
+        android:text="Nguyễn Đức Bảo"
+        android:textColor="#2284DA"
+        android:textSize="30sp" />
+
+    <TextView
+        android:layout_below="@id/textViewTitle"
+        android:id="@+id/textViewMaSinhvien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="18IT309"
+        android:layout_toRightOf="@id/textViewTenSinhvien"
+        android:textColor="#2BCD9A"
+        android:layout_alignParentRight="true"
+        android:textSize="30sp" />
+
+    <Spinner
+        android:id="@+id/spinnerMonHoc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewTenSinhvien"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="36dp"
+        android:entries="@array/monhoc">
+
+    </Spinner>
+
+    <EditText
+        android:id="@+id/editTextScores"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinnerMonHoc"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="36dp"
+        android:hint="Nhập điểm"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/buttonNhapDiem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextScores"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Nhập điểm">
+    </Button>
+
+
+    <ListView
+        android:id="@+id/listViewMonHoc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/buttonNhapDiem"
+        android:layout_marginTop="10dp"></ListView>
+
+</RelativeLayout>

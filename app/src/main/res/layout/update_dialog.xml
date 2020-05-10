@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Cập nhật sinh viên"
+        android:textColor="#FF0000"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/editTextFullNameEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewTitle"
+        android:layout_marginLeft="36dp"
+        android:layout_marginRight="36dp"
+        android:hint="Tên đầy đủ" />
+
+    <EditText
+        android:id="@+id/editTextBirthDateEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextFullNameEdit"
+        android:layout_marginLeft="36dp"
+        android:layout_marginRight="36dp"
+        android:hint="Chọn ngày sinh (double click)" />
+
+
+    <EditText
+        android:id="@+id/editTextAddressEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextBirthDateEdit"
+        android:layout_marginLeft="36dp"
+        android:layout_marginRight="36dp"
+        android:hint="Địa chỉ" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextAddressEdit">
+
+        <RadioButton
+            android:id="@+id/radio_nam_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextAddress"
+            android:layout_marginLeft="36dp"
+            android:checked="true"
+            android:text="Nam" />
+
+        <RadioButton
+            android:id="@+id/radio_nu_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="36dp"
+            android:layout_toRightOf="@id/radio_nam"
+            android:text="Nữ" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/editTextPhoneEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextAddressEdit"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="36dp"
+        android:layout_toRightOf="@id/radioGroup"
+        android:hint="Số điện thoại" />
+
+    <EditText
+        android:id="@+id/editTextMoTaEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextPhoneEdit"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="36dp"
+        android:hint="Mô tả" />
+
+    <Button
+        android:id="@+id/buttonEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="36dp"
+        android:layout_marginBottom="20dp"
+        android:text="Cập nhật" />
+
+    <Button
+        android:id="@+id/buttonHuyEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="36dp"
+        android:layout_marginBottom="20dp"
+        android:text="Hủy cập nhật" />
+
+
+    <ImageView
+        android:id="@+id/imageViewEdit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/progressBarEdit"
+        android:layout_below="@+id/editTextMoTaEdit"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/noimage" />
+
+    <ProgressBar
+        android:id="@+id/progressBarEdit"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/buttonEdit"
+        android:layout_marginLeft="36dp"
+        android:layout_marginRight="36dp"
+        android:layout_marginBottom="16dp" />
+
+</RelativeLayout>

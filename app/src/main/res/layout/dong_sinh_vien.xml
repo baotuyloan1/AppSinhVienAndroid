@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/imageAvatar"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+></ImageView>
+    <TextView
+        android:layout_toRightOf="@id/imageAvatar"
+        android:id="@+id/textViewID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ID sinh viên"
+        android:textColor="#766693"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/textViewSex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/textViewID"
+        android:text="Nam"
+        android:textColor="#002AFF"
+        android:textSize="14dp" />
+
+
+    <TextView
+        android:id="@+id/textViewSDT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="0788049042"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/textViewTen"
+        android:layout_toRightOf="@id/imageAvatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewID"
+        android:text="Nguyễn Đức Bảo"
+        android:textColor="#ff00"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewBirthday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewSDT"
+        android:layout_alignParentRight="true"
+        android:text="07/04/2000"
+        android:textSize="14dp" />
+
+
+    <TextView
+        android:id="@+id/textViewAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageAvatar"
+        android:text="Dương Lâm 1, Hòa Phong, Hòa Vang"
+        android:textSize="14dp" />
+
+    <TextView
+        android:layout_toRightOf="@id/imageAvatar"
+        android:id="@+id/textViewDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewTen"
+        android:text="Năng động, nhiệt huyết, yêu nghề, chăm chỉ"
+        android:textSize="14dp" />
+
+</RelativeLayout>

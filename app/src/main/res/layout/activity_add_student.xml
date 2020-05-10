@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackgound"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    tools:context=".AddStudent">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Thêm sinh viên"
+        android:textColor="#222831"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/editTextFullName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewTitle"
+        android:layout_marginLeft="36dp"
+        android:layout_marginRight="36dp"
+        android:hint="Tên đầy đủ"
+        android:textSize="14dp" />
+
+    <EditText
+        android:id="@+id/editTextBirthDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextFullName"
+        android:layout_marginLeft="36dp"
+        android:layout_marginRight="36dp"
+        android:hint="Chọn ngày sinh (double click)"
+        android:inputType="date"
+        android:textSize="14dp" />
+
+
+    <EditText
+        android:id="@+id/editTextAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextBirthDate"
+        android:layout_marginLeft="36dp"
+        android:layout_marginRight="36dp"
+        android:hint="Địa chỉ"
+        android:textSize="14dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextAddress">
+
+        <RadioButton
+            android:id="@+id/radio_nam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextAddress"
+            android:layout_marginLeft="36dp"
+            android:checked="true"
+            android:text="Nam"
+            android:textSize="14dp" />
+
+        <RadioButton
+            android:id="@+id/radio_nu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="36dp"
+            android:layout_toRightOf="@id/radio_nam"
+            android:text="Nữ"
+            android:textSize="14dp" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextAddress"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="36dp"
+        android:layout_toRightOf="@id/radioGroup"
+        android:hint="Số điện thoại"
+        android:inputType="phone"
+        android:maxLength="11"
+        android:textSize="14dp" />
+
+    <EditText
+        android:id="@+id/editTextMoTa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextPhone"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="36dp"
+        android:hint="Mô tả"
+        android:textSize="14dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/progressBar"
+        android:layout_below="@+id/editTextMoTa"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="36dp"
+        android:src="@drawable/noimage" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/buttonSave"
+        android:layout_marginLeft="36dp"
+        android:layout_marginRight="36dp"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="36dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/custom_button_yes"
+        android:text="Thêm"
+        android:textAllCaps="false"
+        android:textColor="#eeeeee"
+        android:textSize="14dp" />
+
+
+    <Button
+        android:textColor="@color/colorPrimary"
+        android:id="@+id/buttonDeleteAll"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="36dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/custom_button_no"
+        android:text="Xóa all"
+        android:textSize="14dp" />
+
+
+</RelativeLayout>

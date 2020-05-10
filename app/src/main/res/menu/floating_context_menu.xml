@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/floating_edit_sinhvien"
+        android:title="Chỉnh sửa sinh viên"></item>
+
+    <item android:id="@+id/floating_capnhat_diem_sinhvien"
+        android:title="Cập nhật điểm"></item>
+</menu>

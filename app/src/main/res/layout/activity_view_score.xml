@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewScoreActivity">
+
+
+    <TextView
+
+        android:id="@+id/textViewTenSinhvien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="36dp"
+        android:text="Nguyễn Đức Bảo"
+        android:textColor="#2284DA"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/textViewMaSinhvien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="18IT309"
+        android:layout_toRightOf="@id/textViewTenSinhvien"
+        android:textColor="#2BCD9A"
+        android:layout_alignParentRight="true"
+        android:textSize="30sp" />
+
+
+
+
+
+
+</RelativeLayout>
