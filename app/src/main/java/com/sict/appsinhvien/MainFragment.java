@@ -45,7 +45,6 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 
 
-
 public class MainFragment extends Fragment {
     private ArrayList<SinhVien> arraySinhVien;
     private ListView lwSinhVien;
@@ -89,8 +88,6 @@ public class MainFragment extends Fragment {
                 }
             }
         });
-
-
         lwSinhVien.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
@@ -102,18 +99,12 @@ public class MainFragment extends Fragment {
                 return true;
             }
         });
-
-
         return view;
     }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
-
-
     }
 
     private void khoiTao() {
@@ -127,7 +118,6 @@ public class MainFragment extends Fragment {
                 for (DataSnapshot sinhVienSnapShot : dataSnapshot.getChildren()) {
                     SinhVien sinhVien = sinhVienSnapShot.getValue(SinhVien.class);
                     sinhVien.setChecked(false);
-                    Log.d("Sinh viên",sinhVien.getFullName());
                     arraySinhVien.add(sinhVien);
                 }
                 adapter.notifyDataSetChanged();
@@ -135,11 +125,8 @@ public class MainFragment extends Fragment {
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-
             }
         });
-
-
         txtID = (TextView) view.findViewById(R.id.textViewID);
         txtFullName = (TextView) view.findViewById(R.id.textViewTen);
         txtSex = (TextView) view.findViewById(R.id.textViewSex);
@@ -149,14 +136,9 @@ public class MainFragment extends Fragment {
         txtdDescription = (TextView) view.findViewById(R.id.textViewDescription);
         lwSinhVien = (ListView) view.findViewById(R.id.listViewSinhVien);
         arrayView = new ArrayList<View>();
-
         sinhVienDelete = new ArrayList<SinhVien>();
         lwSinhVien.setAdapter(adapter);
-
-
-        Log.d("List view", String.valueOf(arraySinhVien.size()));
     }
-
 
 
     @Override
@@ -164,14 +146,10 @@ public class MainFragment extends Fragment {
         super.onAttach(context);
         if (context instanceof onFragmentBtnSelected) {
             listener = (onFragmentBtnSelected) context;
-
         } else {
             throw new ClassCastException(context.toString());
         }
     }
-
-
-
 
 
     public interface onFragmentBtnSelected {
@@ -260,7 +238,6 @@ public class MainFragment extends Fragment {
 
             };
             AlertDialog.Builder ab = new AlertDialog.Builder(getActivity());
-
             String deleteSinhVienListString = "\n";
             int y = 0;
             for (int i = 0; i < sinhViens.size(); i++) {
@@ -268,13 +245,9 @@ public class MainFragment extends Fragment {
                 y++;
                 deleteSinhVienListString = deleteSinhVienListString + y + " - " + sinhVien.getFullName() + "\n";
             }
-
             ab.setMessage("Bạn có muốn xóa sinh viên đã chọn " + deleteSinhVienListString).setPositiveButton("Đồng ý", dialogClickListener)
                     .setNegativeButton("Quay lại", dialogClickListener).show();
-
         }
-
-
     }
 
     private void deleteSinhVien(ArrayList<SinhVien> sinhVien) {
@@ -300,7 +273,6 @@ public class MainFragment extends Fragment {
     }
 
 
-
     @Override
     public boolean onContextItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
@@ -316,15 +288,4 @@ public class MainFragment extends Fragment {
                 return super.onContextItemSelected(item);
         }
     }
-
-
-
-
-
-
-
-
-
-
-
 }

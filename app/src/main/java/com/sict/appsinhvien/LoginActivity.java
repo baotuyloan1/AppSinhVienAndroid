@@ -42,7 +42,6 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
         signInButton = (SignInButton) findViewById(R.id.buttonSignIn);
         mAuth = FirebaseAuth.getInstance();
 
@@ -52,15 +51,12 @@ public class LoginActivity extends AppCompatActivity {
                 .build();
 
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
-
         signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 signInButton();
             }
         });
-
-
         anhXa();
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,20 +79,15 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithEmail:success");
-                            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                            Intent intent = new Intent(LoginActivity.this, SplashActivity.class);
                             startActivity(intent);
                         } else {
-                            // If sign in fails, display a message to the user.
                             Log.d("Thất bại", "signInWithEmail:failure", task.getException());
-                            Toast.makeText(LoginActivity.this, "Authentication failed.",
+                            Toast.makeText(LoginActivity.this, "Kiểm tra lại email",
                                     Toast.LENGTH_SHORT).show();
 
-                            // ...
                         }
-
-                        // ...
                     }
                 });
     }
@@ -104,9 +95,6 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     public void onStart() {
         super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-
     }
 
 
@@ -128,12 +116,12 @@ public class LoginActivity extends AppCompatActivity {
             try {
                 //xác thực đăng nhập firebase
                 GoogleSignInAccount account = task.getResult(ApiException.class);
-                Log.d(TAG, "firebaseAuthWithGoogle:" + account.getId());
-
+                Log.d(TAG, "Tài khoản google:" + account.getId());
+                Toast.makeText(this, "Chức năng hiện đang bảo trì", Toast.LENGTH_SHORT).show();
             } catch (ApiException e) {
-                Log.w(TAG, "Google sign in failed", e);
+                Log.w(TAG, "Đăng nhập thất bại", e);
             }
-            checkLogin(task);
+//            checkLogin(task);
         }
     }
 
@@ -143,7 +131,7 @@ public class LoginActivity extends AppCompatActivity {
         try {
             GoogleSignInAccount acc = completeTask.getResult(ApiException.class);
             Toast.makeText(LoginActivity.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            Intent intent = new Intent(LoginActivity.this, SplashActivity.class);
             GoogleSignInAccount user = getDataUser();
             String name = user.getDisplayName();
             String img = user.getPhotoUrl().toString();
@@ -153,7 +141,7 @@ public class LoginActivity extends AppCompatActivity {
             Log.d("Login", user.getDisplayName());
 //            FirebaseGoogleAuth(acc);
         } catch (ApiException e) {
-            Toast.makeText(LoginActivity.this, "Đăng nhập thất bại", Toast.LENGTH_SHORT).show();
+            Toast.makeText(LoginActivity.this, "Kiểm tra lại tài khoản", Toast.LENGTH_SHORT).show();
             FirebaseGoogleAuth(null);
         }
     }

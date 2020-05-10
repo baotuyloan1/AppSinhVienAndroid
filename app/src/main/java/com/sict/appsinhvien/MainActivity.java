@@ -173,4 +173,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public void onButtonSelected(int id) {
 
     }
+
+    @Override
+    protected void onStop() {
+        FirebaseAuth.getInstance().signOut();
+        super.onStop();
+    }
 }

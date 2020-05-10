@@ -12,10 +12,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ScoresActivity"
+        <activity android:name=".SplashActivity"></activity>
+        <activity
+            android:name=".ScoresActivity"
             android:screenOrientation="landscape"
-            tools:ignore="LockedOrientationActivity"></activity>
-        <activity android:name=".ViewScoreActivity" />
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".MainActivity"
             android:configChanges="keyboardHidden|orientation"
@@ -26,11 +27,10 @@
         <activity android:name=".AddScoreActivity" />
         <activity
             android:name=".AddStudent"
-            android:parentActivityName=".MainActivity"></activity>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".LoginActivity"
-            android:theme="@style/NoActionBar"
-         >
+            android:theme="@style/NoActionBar">
             <intent-filter>
                 <action
                     android:name="android.intent.action.MAIN"
@@ -39,6 +39,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

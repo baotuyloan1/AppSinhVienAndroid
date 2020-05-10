@@ -71,23 +71,18 @@ public class AddStudent extends AppCompatActivity {
                 uploadFile();
             }
         });
-
         btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                deleteDataInput();
-
-
             }
         });
-
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openFileChooser();
             }
         });
-
         assert getSupportActionBar() != null;   //null check
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);   //show back button
     }
@@ -100,7 +95,6 @@ public class AddStudent extends AppCompatActivity {
         ra_Nam.setChecked(true);
         ra_Nu.setChecked(false);
         edtFullName.setText("");
-
     }
 
 
@@ -118,11 +112,8 @@ public class AddStudent extends AppCompatActivity {
         btnSave = (Button) findViewById(R.id.buttonSave);
         imageView = (ImageView) findViewById(R.id.imageView);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
-
         autoIncrement();
-
     }
-
     //chọn ngày sinh
     private void chooseDay() {
         final Calendar calendar = Calendar.getInstance();
@@ -162,9 +153,7 @@ public class AddStudent extends AppCompatActivity {
                         maxId = idSinhVien+1;
                     }
                 }
-
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
             }
@@ -215,7 +204,6 @@ public class AddStudent extends AppCompatActivity {
                     }
                 }
             });
-
             storageRef.putFile(imageUri).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
                 @Override
                 public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
